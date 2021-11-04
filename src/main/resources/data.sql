@@ -1,0 +1,10 @@
+insert into user (firstname, lastname, email, username) values ('Mannie', 'Olyfant', 'molyfant0@4shared.com', 'molyfant0');
+insert into user (firstname, lastname, email, username) values ('Calvin', 'Sweeny', 'csweeny1@hostgator.com', 'csweeny1');
+insert into user (firstname, lastname, email, username) values ('Pattin', 'Bottelstone', 'pbottelstone2@gov.uk', 'pbottelstone2');
+insert into user (firstname, lastname, email, username) values ('Trula', 'Joel', 'tjoel3@elpais.com', 'tjoel3');
+insert into user (firstname, lastname, email, username) values ('Alvy', 'Frizzell', 'afrizzell4@tiny.cc', 'afrizzell4');
+insert into user (firstname, lastname, email, username) values ('Cal', 'Couldwell', 'ccouldwell5@bing.com', 'ccouldwell5');
+insert into user (firstname, lastname, email, username) values ('Lorain', 'Jury', 'ljury6@berkeley.edu', 'ljury6');
+insert into user (firstname, lastname, email, username) values ('Lavinia', 'Bortolutti', 'lbortolutti7@census.gov', 'lbortolutti7');
+insert into user (firstname, lastname, email, username) values ('Friedrick', 'Gibbie', 'fgibbie8@cbc.ca', 'fgibbie8');
+insert into user (firstname, lastname, email, username) values ('Juliana', 'Fowells', 'jfowells9@linkedin.com', 'jfowells9');

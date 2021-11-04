@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Raleway:400,300,600" />
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.min.css" />
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
+	<title>Users manager</title>
+</head>
+
+<body>
+	<div class="container">
+		<h1>All users</h1>
+		<div class="row">
+			<form th:method="put" th:action="@{/}">
+				<table class="u-full-width">
+					<thead>
+						<tr>
+							<th>Id</th>
+							<th>Firstname</th>
+							<th>Lastname</th>
+							<th>Email</th>
+							<th>Username</th>
+						</tr>
+					</thead>
+					<tbody th:each="user : ${users}">
+						<tr>
+							<td style="display: none">
+								<input type="hidden" name="id" th:value="${user.id}" />
+								<input type="hidden" name="firstname" th:value="${user.firstname}" />
+								<input type="hidden" name="lastname" th:value="${user.lastname}" />
+								<input type="hidden" name="email" th:value="${user.email}" />
+								<input type="hidden" name="username" th:value="${user.username}" />
+							</td>
+							<td><span th:text="${user.id}"></span></td>
+							<td><span th:text="${user.firstname}"></span></td>
+							<td><span th:text="${user.lastname}"></span></td>
+							<td><span th:text="${user.email}"></span></td>
+							<td><span th:text="${user.username}"></span></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+		<hr />
+		<form method="post" th:action="@{/}" th:object="${newUser}">
+			<div class="row">
+				<div class="nine columns">
+					<input type="text" placeholder="Firstname of the user"
+						class="u-full-width" th:field="*{firstname}" />
+					<input type="text" placeholder="Lastname of the user"
+						class="u-full-width" th:field="*{lastname}" />
+					<input type="text" placeholder="Email of the user"
+						class="u-full-width" th:field="*{email}" />
+					<input type="text" placeholder="Username of the user"
+						class="u-full-width" th:field="*{username}" />
+					<span th:if="${error != null}" th:text="${error}"></span>
+				</div>
+				<div class="three columns">
+					<button type="submit" class="button-primary u-full-width">Add</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
